@@ -1,0 +1,46 @@
+(<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home_Median_app</title>
+      <link rel="stylesheet" href="{{ url_for('static',filename='style1.css')}}">
+</head>
+<body>
+    <section>
+     <div class="loginbox">
+        <form action="">
+            <h2>LOGIN</h2>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
+                <input type="email" required>     
+                <label >Email</label>      
+            </div>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                <input type="email" required>     
+                <label >Password</label>      
+            </div>
+            <div class="remember-forgot">
+                <label ><input type="checkbox">Remember Me</label>
+                <a href="#">FORGOT PASSWORD</a>
+            </div>
+            
+            <button type="button" onclick="goToSecond()">Login</button>
+            <div class="register-link">
+                <p>Dont have Acoount <a href="#">Register</a>
+                </p>
+            </div>
+        </form>
+     </div>
+    </section>
+    <script>
+        function goToSecond() {
+            window.location.href = "{{ url_for('home1') }}";  
+        }
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+</body>
+</html>)

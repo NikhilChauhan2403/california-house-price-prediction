@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House_data_predictor</title>
+     <link rel="stylesheet" href="{{ url_for('static',filename='style2.css')}}">
+</head>
+<body>
+    <form id="detailform" action="/submit" method="post">
+        <div class="animated-text">
+            <p class="at">Welcome to California house price Predictor</p>
+        </div>
+        <div class="form1">
+                
+                <input type="text" name="longitude" id="lat" placeholder="Enter longitude" required><br>
+                <input type="text"name="latitude"id="long" placeholder="Enter latitude" required><br>
+                <input type="text"name="Housing_median_age" id="age"placeholder="Housing_median_age" required><br>
+                <input type="text" name="Total Rooms"id="room"placeholder="Total Rooms" required><br>
+                <input type="text" name="Total Bedrooms"id="bedroom"placeholder="Total Bedrooms"required><br>
+                <input type="text" name="Population"id="population"placeholder="Population"><br>
+                <input type="text" name="Household"id="household"placeholder="Household"><br>
+                <input type="text" name="Median_income"id="income"placeholder="Median_income"><br>
+                <div class="ocean" >
+                 <p>Ocean-proximity</p>
+                 <select  class="scroll"  name="Ocean-proximity" required>
+                    <option value="1H OCEAN">&lt;1H OCEAN</option>
+                    <option value="INLAND">INLAND</option>
+                    <option value="NEAR OCEAN">NEAR OCEAN</option>
+                    <option value="NEAR BAY">NEAR BAY</option>
+                    <option value="ISLAND">ISLAND</option>
+                 </select>
+                </div>
+                <button type="submit">Submit</button>
+                {% if prediction %}
+                    <h3>🏠 Predicted House Value: {{ prediction }}</h3>
+                {% endif %}
+               
+        </div>
+
+
+    </form>
+    <pre id="output"></pre>
+    <!-- <script src="{{ url_for('static', filename='script1.js') }}"></script> -->
+    
+</body>
+</html>
