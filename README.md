@@ -19,7 +19,6 @@ The trained machine learning model file is too large to be uploaded to GitHub.
 
 To run the project:
 - Train the model using the provided dataset and notebook
-- Or place the trained model file (`model.pkl`) in the project root directory
 
 ## ▶️ How to Run
 ```bash
